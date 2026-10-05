@@ -2,17 +2,11 @@
 
 [My Notes](notes.md)
 
-This is a digital tracker that functions as a personal library. Users will create and login to their profile, which stores all book data that is associated with them. They will add books to their bookshelf if they like them, with their favorites being placed on the top shelf. They can also add books to a stack that tracks what they intend to read next. When a user adds a book to their shelf that is a favorite of another user, the second user will be recommended one of the first user's favorite books by way of real-time notification.
-
-> [!NOTE]
-> This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
-
-> [!NOTE]
-> If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
+This is a digital tracker that functions as a personal library. Users will create and login to their profile, which stores all book data that is associated with them. They will add books to their bookshelf if they like them, with their favorites being placed on the top shelf. They can also add books to a stack that tracks what they intend to read next. When a user adds a book to their shelf that is a favorite of another user, the second user will be recommended one of the first user's favorite books by way of real-time notification. 
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I want to create a virtual bookshelf that allows users to track what books they've read, liked, or intend to read in the future. I also would like to implement a sharing function that recommends a user's favorites when they add a book to their shelf that is on someone else's favorites shelf. If there is space for it within the time constraints, I think it'd be really awesome to add a way for users to form a reading group with others who have a shared book in their "future reading" pile. A discussion forum would also be cool, but might be too much.
 
 ### Design
 
