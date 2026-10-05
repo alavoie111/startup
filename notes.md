@@ -10,6 +10,10 @@ This file represents what I have learned about web programming.
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
+## Git
+
+Tidbits regarding Git
+
 ## AWS
 
 Interesting things I have learned about AWS
@@ -21,3 +25,7 @@ Interesting things I have learned about HTML
 ## React
 
 Interesting things I have learned about React
+
+## Final Take-Away
+
+I love web programming!
