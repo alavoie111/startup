@@ -2,55 +2,63 @@
 
 [My Notes](notes.md)
 
-This is a digital tracker that functions as a personal library. Users will create and login to their profile, which stores all book data that is associated with them. They will add books to their bookshelf if they like them, with their favorites being placed on the top shelf. They can also add books to a stack that tracks what they intend to read next. When a user adds a book to their shelf that is a favorite of another user, the second user will be recommended one of the first user's favorite books by way of real-time notification. 
+This is an interactive, digital personal library designed for book lovers who want to organize their reading journey and connect with others through shared tastes. Users can manage their personal virtual bookshelf by pinning their top favorites to the top shelf and curating a stack of books they intend to read next. What makes my project unique is its real-time social layer. When you favorite a book that another user loves, it instantly recommends one of their other top favorites directly to your feed. It’s a seamless way to track your reading habits and discover your next favorite book through reader-to-reader recommendations.
 
 ### Elevator pitch
 
-I want to create a virtual bookshelf that allows users to track what books they've read, liked, or intend to read in the future. I also would like to implement a sharing function that recommends a user's favorites when they add a book to their shelf that is on someone else's favorites shelf. If there is space for it within the time constraints, I think it'd be really awesome to add a way for users to form a reading group with others who have a shared book in their "future reading" pile. A discussion forum would also be cool, but might be too much.
+This is an interactive, digital personal library designed for book lovers who want to organize their reading journey and connect with others through shared tastes. Users can manage their personal virtual bookshelf by pinning their top favorites to the top shelf and curating a stack of books they intend to read next. What makes my project unique is its real-time social layer. When you favorite a book that another user loves, it instantly recommends one of their other top favorites directly to your feed. It’s a seamless way to track your reading habits and discover your next favorite book through reader-to-reader recommendations.
 
 ### Design
 
-![Design image](placeholder.png)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-```mermaid
-sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
-```
+![Design image](library-mockup.png)
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- **Interactive Virtual Bookshelf:** Visual shelf layout separating top-shelf favorites, already-read books, and stacks of intended reads.
+- **User Authentication:** Secure account creation, login, and session persistence.
+- **Third-Party Book Search:** Live title, author, and cover art search using external library APIs.
+- **Real-Time Peer Recommendations:** Automatic cross-matching of favorite books between users delivered via instant real-time notifications.
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses correct, semantic HTML5 structure across the application (e.g., \<header>, \<main>, \<nav>, \<section>, \<footer>). Provides a single-page application (SPA) layout shell with clear sectioning for login views, the primary virtual bookshelf, reading stacks, and notification banners.
+- **CSS** - Application styling that is clean, modern, and responsive across varying screen sizes (mobile, tablet, desktop) using Flexbox and CSS Grid. Uses a cozy book-themed color palette with strong contrast, thoughtful whitespace, and smooth CSS transitions/animations when organizing or moving books between shelves.
+- **React** - Frontend single-page application built with React components and dynamic client-side routing. Key modular components would include user authorization, bookshelves, reading stacks, the search function, and a notification banner.
+
+- **Service** - Backend REST service providing functional endpoints to support application features:
+
+    - User Management: Authentication endpoints for user registration, login, logout, and token validation.
+
+    - Shelf Operations: Endpoints to create, retrieve, update, and delete books on a user's shelves or reading stack.
+
+    - Recommendation Logic: Server-side comparison endpoints to detect shared favorites across users.
+
+    - Third-Party Service: Server-side integration with the Open Library API ([https://openlibrary.org/search.json](https://openlibrary.org/search.json)) to fetch book metadata, publication details, and high-resolution cover images.
+- **DB** - Persistent database storage (MongoDB/PostgreSQL) used to render application data, including:
+
+    - User profile records and securely hashed credentials.
+
+    - Master book metadata records (titles, authors, cover URLs, external API IDs).
+
+    - Relational mappings linking users to their shelves and stack items (indicating shelf status: favorite, read, or future_reading).
+- **WebSocket** - Real-time server-to-client communication connection:
+
+    - When a user adds a book to their favorites shelf, the server checks if that title exists on another user's favorites shelf.
+
+    - Upon a match, the server broadcasts an immediate WebSocket message to trigger a real-time notification recommending another favorite book from the matching user's shelf.
 
 ## 🚀 Specification Deliverable
 
-> [!NOTE]
-> Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
-
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Git commit requirement)
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology including your 3rd party API and use of WebSocket
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] I completed the prerequisites for this deliverable (Git commit requirement)
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology including your 3rd party API and use of WebSocket
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ## 🚀 AWS deliverable
 
